@@ -1,0 +1,27 @@
+# config/packages/monolog.yaml
+monolog:
+    handlers:
+        main:
+            type: stream
+            path: "C:/xampp/my_project/var/log/%kernel.environment%.log"
+            level: debug
+
+            
+        # Log info and higher levels to info.log
+        info:
+            type: stream
+            path: "%kernel.logs_dir%/info.log"
+            level: info
+
+        # Log warning and higher levels to warning.log
+        warning:
+            type: stream
+            path: "%kernel.logs_dir%/warning.log"
+            level: warning
+
+        # Log errors and higher levels to error.log
+        error:
+            type: stream
+            path: "%kernel.logs_dir%/error.log"
+            level: error
+

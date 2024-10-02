@@ -3,3 +3,14 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+
+# config/routes.yaml
+Lucky:
+    path: /lucky/number
+    # the controller value has the format 'controller_class::method_name'
+    controller: App\Controller\LuckyController::list
+
+    # if the action is implemented as the __invoke() method of the
+    # controller class, you can skip the '::method_name' part:
+    # controller: App\Controller\LuckyController
